@@ -1,0 +1,63 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: Helvetica;
+}
+
+a {
+	color: #777777;
+	font-size: 19px;
+	text-decoration: none;
+}
+
+#menu {
+	position: fixed;
+	height: 70px;
+	width: 100%;
+	background-color: #ECECEC;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	border: 1px solid #CCCCCC;
+	border-width: 0 0 1px 0;
+	z-index: 2;
+}
+
+#menuTable {
+	height: 100%;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#menuTable td {
+	margin: 0;
+}
+
+#menuLogo {
+	height: 60px;
+	padding: 2px 2px 2px 32px;
+}
+
+.linkTD {
+	border: 2px solid #CCCCCC;
+	border-width: 0 2px 0 2px;
+	padding: 0 10px 0 10px;
+	text-align: center;
+}
+
+#main {
+	position: absolute;
+	height: 95%;
+	background-color: #FDFDFD;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+#content {
+	height: 100%;
+	width: 100%;
+	border: none;
+}
