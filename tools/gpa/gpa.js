@@ -59,8 +59,11 @@ function resize() {
 		_('gpaText').style.fontSize = '32px';
 		$('.gpaTHead').css('font-size', '19px');
 		$('.gpaA').css('height', '17px');
+		$('.gpaA').css('padding', '0 7px 0 7px');
 		$('.gpaH').css('height', '19px');
-		$('#gpa td').css('font-size', '19px');
+		$('.gpaH').css('padding', '0 7px 0 7px');
+		$('#gpa td').css('font-size', '22px');
+		
 	} else {
 		_('gpa').style.fontSize = '43px';
 		_('gpaTitle').style.fontSize = '43px';
@@ -68,7 +71,10 @@ function resize() {
 		_('gpaText').style.fontSize = '45px';
 		$('.gpaTHead').css('font-size', '32px');
 		$('.gpaA').css('height', '30px');
+		$('.gpaA').css('padding', '0 20px 0 20px');
 		$('.gpaH').css('height', '32px');
+		$('.gpaH').css('padding', '0 20px 0 20px');
+		$('#gpa td').css('font-size', '35px');
 	}
 }
 
