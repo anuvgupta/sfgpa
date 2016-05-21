@@ -43,16 +43,16 @@ function gpaSetEvents() {
 
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
-		_('gpa').style.fontSize = '30px';
-		_('gpaTitle').style.fontSize = '38px';
-		_('gpa').style.fontSize = '30px';
-		_('gpaText').style.fontSize = '32px';
-		$('.gpaTHead').css('font-size', '19px');
-		$('.gpaA').css('height', '17px');
+		_('gpa').style.fontSize = '32px';
+		_('gpaTitle').style.fontSize = '40px';
+		_('gpa').style.fontSize = '32px';
+		_('gpaText').style.fontSize = '34px';
+		$('.gpaTHead').css('font-size', '21px');
+		$('.gpaA').css('height', '19px');
 		$('.gpaA').css('padding', '0 7px 0 7px');
-		$('.gpaH').css('height', '19px');
+		$('.gpaH').css('height', '21px');
 		$('.gpaH').css('padding', '0 7px 0 7px');
-		$('#gpa td').css('font-size', '22px');
+		$('#gpa td').css('font-size', '24px');
 		
 	} else {
 		_('gpa').style.fontSize = '43px';
