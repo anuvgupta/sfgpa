@@ -20,16 +20,10 @@
 				newGPA = newGPA/7;
 				_('GPAText').innerHTML = 'GPA: ' + newGPA.toFixed(2);
 			}
-			function leftHandler(j) {
-				return function(event) { 
-        			if(courses[j] > 0) courses[j]--;
-					_(j + 1).innerHTML = letters[courses[j]];
-					recalculate();
-    			};
-			}
-			function rightHandler(j) {
+			function arrowHandler(j, t) {
 				return function(event) {
-					if(courses[j] < 10) courses[j]++;
+					if((courses[j] > 0) && (t == 'l')) courses[j]--;
+					else if(courses[j] < 10) courses[j]++;
 					_(j + 1).innerHTML = letters[courses[j]];
 					recalculate();
 				};
@@ -44,8 +38,8 @@
 			}
 			function setEvents() {
 				for (var i = 0; i < 7; i++) {
-					$('#l' + (i + 1)).click(leftHandler(i));
-					$('#r' + (i + 1)).click(rightHandler(i));
+					$('#l' + (i + 1)).click(arrowHandler(i, 'l'));
+					$('#r' + (i + 1)).click(arrowHandler(i, 'r'));
 					$('#h' + (i + 1)).click(honorsHandler(i));
 				}
 			}
