@@ -41,7 +41,8 @@ function gpaSetEvents() {
 }
 
 function resize() {
-	if (window.innerWidth < window.innerHeight) {
+	//if (window.innerWidth < window.innerHeight) {
+	if (screen.width < screen.height) {
 		_('gpa').style.fontSize = '35px';
 		_('gpaTitle').style.fontSize = '35px';
 		_('gpa').style.fontSize = '35px';
