@@ -37,6 +37,7 @@ function gpaSetEvents() {
 		$('#gpaR' + (i + 1)).click(gpaArrowHandler(i, 'r'));
 		$('#gpaH' + (i + 1)).click(gpaHonorsHandler(i));
 	}
+	console.log('hi');
 }
 
 //$(document).ready(gpaSetEvents);

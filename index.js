@@ -17,10 +17,7 @@ function lClickHandler(j) {
 }
 
 function setEvents() {
-	for (var i = 1; i <= 3; i++) {
-		console.log(i);
-		$('#l' + i).click(lClickHandler(i));
-	}
+	for (var i = 1; i <= 3; i++) $('#l' + i).click(lClickHandler(i));
 }
 
 function load() {
