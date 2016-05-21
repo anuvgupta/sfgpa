@@ -4,7 +4,7 @@ html, body {
 	font-family: Helvetica;
 }
 
-a {
+.link {
 	color: #777777;
 	font-size: 19px;
 	text-decoration: none;
@@ -21,7 +21,7 @@ a {
 	padding: 0;
 	border: 1px solid #CCCCCC;
 	border-width: 0 0 1px 0;
-	z-index: 2;
+	z-index: 10;
 }
 
 #menuTable {
@@ -32,6 +32,11 @@ a {
 
 #menuTable td {
 	margin: 0;
+	background-color: none;
+}
+
+#menuTable td:hover {
+	background-color: #DCDCDC;
 }
 
 #menuLogo {
@@ -49,6 +54,8 @@ a {
 #main {
 	position: absolute;
 	height: 95%;
+	width: 1px;
+    min-width: 100%;
 	background-color: #FDFDFD;
 	top: 0;
 	left: 0;
