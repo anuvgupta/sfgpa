@@ -3,5 +3,5 @@ function resize() {
 	else _('menu').style.height = '73px';
 }
 
-$(window).resize(resize);
-$(document).ready(resize);
+//$(window).resize(resize);
+//$(document).ready(resize);
