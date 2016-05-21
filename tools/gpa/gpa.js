@@ -42,9 +42,21 @@ function gpaSetEvents() {
 
 function resize() {
 	if (window.innerWidth < window.innerHeight) {
-		console.log('hihihi');
+		_('gpa').style.fontSize = '35px';
+		_('gpaTitle').style.fontSize = '35px';
+		_('gpa').style.fontSize = '35px';
+		_('gpaText').style.fontSize = '37px';
+		$('.gpaTHead').css('font-size', '24px');
+		$('.gpaA').css('height', '22px');
+		$('.gpaH').css('height', '24px');
 	} else {
-		
+		_('gpa').style.fontSize = '43px';
+		_('gpaTitle').style.fontSize = '43px';
+		_('gpa').style.fontSize = '43px';
+		_('gpaText').style.fontSize = '45px';
+		$('.gpaTHead').css('font-size', '32px');
+		$('.gpaA').css('height', '30px');
+		$('.gpaH').css('height', '32px');
 	}
 }
 
