@@ -1,15 +1,5 @@
 var tools = ['home', 'gpa'];
 
-function resize() {
-	if (window.innerWidth < window.innerHeight) {
-		
-	}
-	else {
-		_('menu').style.height = '73px';
-		_('mainTop').style.height = '73px';
-	}
-}
-
 function lClickHandler(j) {
 	return function(event) {
 		$('.linkTD').css('backgroundColor', '');

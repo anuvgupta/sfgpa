@@ -1,6 +1,3 @@
-@media screen and (max-aspect-ratio: 1) {
-	#gpa { font-size: 2px; }
-}
 #gpa { font: 43px Courier New, verdana, sans-serif; padding: 7; background-color: #FAFAFA; }
 #gpaTitle { font: 43px Courier New, verdana, sans-serif; text-align: center; font-weight: bold; }
 #gpa form { padding: 24px 0 0 35px; }
