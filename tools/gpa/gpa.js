@@ -61,7 +61,7 @@ function resize() {
 		$('.gpaTHead').css('font-size', '19px');
 		$('.gpaA').css('height', '17px');
 		$('.gpaH').css('height', '19px');
-		$('#gpa td').css('font-size', '30px');
+		$('#gpa td').css('font-size', '1px');
 	} else {
 		_('gpa').style.fontSize = '43px';
 		_('gpaTitle').style.fontSize = '43px';
