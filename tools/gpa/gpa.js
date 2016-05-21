@@ -54,7 +54,7 @@ function resize() {
 		alert('hey');
 		*/
 		_('gpa').style.fontSize = '30px';
-		_('gpaTitle').style.fontSize = '40px';
+		_('gpaTitle').style.fontSize = '38px';
 		_('gpa').style.fontSize = '30px';
 		_('gpaText').style.fontSize = '32px';
 		$('.gpaTHead').css('font-size', '19px');
