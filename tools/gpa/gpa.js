@@ -19,6 +19,7 @@ function gpaArrowHandler(j, t) {
 		else if(gpaCourses[j] < 10) gpaCourses[j]++;
 		_('gpa' + (j + 1)).innerHTML = gpaLetters[gpaCourses[j]];
 		gpaRecalculate();
+		resize();
 	};
 }
 
@@ -50,6 +51,7 @@ function resize() {
 		$('.gpaTHead').css('font-size', '24px');
 		$('.gpaA').css('height', '22px');
 		$('.gpaH').css('height', '24px');
+		alert('hey');
 	} else {
 		_('gpa').style.fontSize = '43px';
 		_('gpaTitle').style.fontSize = '43px';
