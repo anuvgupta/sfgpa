@@ -42,17 +42,7 @@ function gpaSetEvents() {
 }
 
 function resize() {
-	//if () {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
-		/*
-		_('gpa').style.fontSize = '35px';
-		_('gpaTitle').style.fontSize = '45px';
-		_('gpaText').style.fontSize = '37px';
-		$('.gpaTHead').css('font-size', '24px');
-		$('.gpaA').css('height', '22px');
-		$('.gpaH').css('height', '24px');
-		alert('hey');
-		*/
 		_('gpa').style.fontSize = '30px';
 		_('gpaTitle').style.fontSize = '38px';
 		_('gpa').style.fontSize = '30px';
