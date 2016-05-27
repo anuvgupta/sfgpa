@@ -19,7 +19,7 @@ function setEvents() {
 
 function load() {
 	setEvents();
-	if(mobile() && ((screen.width < screen.height) || (window.innerWidth < window.innerHeight))) alert("tablet");
+	if(mobile() && ((screen.width > screen.height) || (window.innerWidth > window.innerHeight))) alert("tablet");
 }
 
 $(document).ready(load);
