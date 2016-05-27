@@ -9,7 +9,6 @@ function lClickHandler(j) {
 		});
 		$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[j - 1] + "/" + tools[j - 1] + ".css'>");
 		$.getScript('./tools/' + tools[j - 1] + '/' + tools[j - 1] + '.js');
-		//$('head').append("<meta name = 'viewport' content = 'width=device-width, initial-scale=1.8, maximum-scale=1.8, user-scalable=no'/>");
 	};
 }
 
@@ -19,6 +18,11 @@ function setEvents() {
 
 function load() {
 	setEvents();
+	$.get('./tools/' + tools[0] + '/' + tools[0] + '.html', function(data) {
+    	_('mainContent').innerHTML = data;
+	});
+	$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[0] + "/" + tools[0] + ".css'>");
+	$.getScript('./tools/' + tools[0] + '/' + tools[0] + '.js');
 	//if(mobile() && ((screen.width > screen.height) || (window.innerWidth > window.innerHeight))) alert("tablet");
 }
 
