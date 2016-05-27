@@ -19,6 +19,7 @@ function setEvents() {
 
 function load() {
 	setEvents();
+	if(tablet()) alert("tablet");
 }
 
 $(document).ready(load);
