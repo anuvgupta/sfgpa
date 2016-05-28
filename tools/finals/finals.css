@@ -1,0 +1,11 @@
+#finals { font: 42px Courier New, verdana, sans-serif; padding: 7; background-color: #FAFAFA; }
+#finalsTitle { font-size: 53px; text-align: center; }
+.finalsBreak1 { font-size: 30px; }
+.finalsBreak2 { font-size: 20px; }
+#finalsTable { font-size: 30px; text-align: center; padding: 15px; }
+#finalsTable td { padding: 6px; }
+.finalsButton { font-size: 35px; background-color: #444444; color: #D2D2D2; padding: 13px 25px 13px 25px; }
+.finalsButton:hover { background-color: #565656; }
+#finals input { padding: 5px 0 5px 0; width: 120px; text-align: center; border: 2px solid #EEEEEE; background-color: #F0F0F0; font: 23px Courier New, verdana, sans-serif; }
+#finalsLetter { font-size: 43px; }
+#finalsOutput { color: green; font-weight: bold; background-color: #F0F0F0; padding: 6px 15px 6px 15px; }
