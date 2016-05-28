@@ -1,0 +1,86 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: Helvetica;
+}
+
+.link {
+	color: #777777;
+	font-size: 24.7px;
+	text-decoration: none;
+}
+
+#menu {
+	position: fixed;
+	height: 94.9px;
+	width: 100%;
+	background-color: #ECECEC;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	border: 1.3px solid #CCCCCC;
+	border-width: 0 0 1.3px 0;
+	z-index: 10;
+}
+
+#menuTable {
+	height: 100%;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#menuTable td {
+	margin: 0;
+	background-color: none;
+}
+
+#menuTable td:hover {
+	background-color: #DCDCDC;
+}
+
+#menuLogo {
+	height: 78px;
+	padding: 2.6px 2.6px 2.6px 2.6px;
+}
+
+.linkTD {
+	border: 2.6px solid #CCCCCC;
+	border-width: 0 2.6px 0 2.6px;
+	padding: 0 13px 0 13px;
+	text-align: center;
+}
+
+#main {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+    min-width: 100%;
+	background-color: #FDFDFD;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+#mainTable {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	background-color: #FAFAFA;
+}
+
+#mainTop {
+	height: 94.9px;
+}
+
+#content {
+	height: 100%;
+	width: 100%;
+	border: none;
+}

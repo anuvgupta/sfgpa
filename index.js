@@ -17,13 +17,14 @@ function setEvents() {
 }
 
 function load() {
+	if(mobile() && ((screen.width < screen.height) || (window.innerWidth < window.innerHeight))) $('head').append("<link rel = 'stylesheet' type = 'text/css' href = './index_mobile.css'>");
+	else $('head').append("<link rel = 'stylesheet' type = 'text/css' href = './index.css'>");
 	setEvents();
 	$.get('./tools/' + tools[0] + '/' + tools[0] + '.html', function(data) {
     	_('mainContent').innerHTML = data;
 	});
 	$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[0] + "/" + tools[0] + ".css'>");
 	$.getScript('./tools/' + tools[0] + '/' + tools[0] + '.js');
-	//if(mobile() && ((screen.width > screen.height) || (window.innerWidth > window.innerHeight))) alert("tablet");
 }
 
 $(document).ready(load);
