@@ -1,5 +1,5 @@
 #gpa { font: 43px Courier New, verdana, sans-serif; padding: 7; background-color: #FAFAFA; }
-#gpaTitle { font: 53px Courier New, verdana, sans-serif; text-align: center; font-weight: bold; }
+#gpaTitle { font-size: 53px; text-align: center; font-weight: bold; }
 #gpa form { padding: 24px 0 0 0; }
 #gpa td { text-align: center; }
 .gpaTHead { font-size: 32px; }

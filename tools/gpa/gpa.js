@@ -32,7 +32,7 @@ function gpaHonorsHandler(j) {
 	};
 }
 
-function gpaSetEvents() {
+function gpaInit() {
 	for (var i = 0; i < 7; i++) {
 		$('#gpaL' + (i + 1)).click(gpaArrowHandler(i, 'l'));
 		$('#gpaR' + (i + 1)).click(gpaArrowHandler(i, 'r'));
@@ -68,4 +68,4 @@ function resize() {
 }
 
 $(window).resize(resize);
-gpaSetEvents();
+gpaInit();
