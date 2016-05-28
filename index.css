@@ -88,7 +88,7 @@ html, body {
 @media only screen and (max-device-width: 480px) {
 	.link {
 		color: #777777;
-		font-size: 50px;
+		font-size: 19px;
 		text-decoration: none;
 	}
 
