@@ -1,3 +1,4 @@
 #home { font: 46px Courier New, verdana, sans-serif; padding: 7; background-color: #FAFAFA; }
-#h1 { font-size: 70px; font-weight: bold; }
-#h2 { font-size: 40px; }
+#homeTitle { font-size: 70px; font-weight: bold; }
+#homeImg { height: 200px; }
+#homeText { font-size: 40px; }
