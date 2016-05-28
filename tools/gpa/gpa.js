@@ -16,7 +16,7 @@ function gpaRecalculate() {
 function gpaArrowHandler(j, t) {
 	return function(event) {
 		if((gpaCourses[j] > 0) && (t == 'l')) gpaCourses[j]--;
-		else if(gpaCourses[j] < 10) gpaCourses[j]++;
+		else if((gpaCourses[j] < 10) && (t == 'r')) gpaCourses[j]++;
 		_('gpa' + (j + 1)).innerHTML = gpaLetters[gpaCourses[j]];
 		gpaRecalculate();
 		resize();
