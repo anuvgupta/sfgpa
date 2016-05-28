@@ -9,8 +9,9 @@ function gpaRecalculate() {
 		newGPA += gpaGpas[gpaCourses[i]];
 		if(gpaHonors[i]) newGPA++;
 	}
-	newGPA = newGPA/7;
-	_('gpaText').innerHTML = 'GPA: ' + (+newGPA.toFixed(2)).toFixed(1);
+	newGPA = +((newGPA/7).toFixed(2));
+	if (String(newGPA).length == 1) _('gpaText').innerHTML = 'GPA: ' + newGPA + '.0';
+	else _('gpaText').innerHTML = 'GPA: ' + String(+newGPA.toFixed(2));
 }
 
 function gpaArrowHandler(j, t) {
