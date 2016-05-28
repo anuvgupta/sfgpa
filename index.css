@@ -86,21 +86,15 @@ html, body {
 }
 
 @media only screen and (max-device-width: 480px) {
-	html, body {
-		height: 100%;
-		width: 100%;
-		font-family: Helvetica;
-	}
-
 	.link {
-		color: red;
+		color: #777777;
 		font-size: 50px;
 		text-decoration: none;
 	}
 
 	#menu {
 		position: fixed;
-		height: 20%;
+		height: 100px;
 		width: 100%;
 		background-color: #ECECEC;
 		top: 0;
@@ -110,21 +104,6 @@ html, body {
 		border: 1.3px solid #CCCCCC;
 		border-width: 0 0 1.3px 0;
 		z-index: 10;
-	}
-
-	#menuTable {
-		height: 100%;
-		width: 100%;
-		border-collapse: collapse;
-	}
-
-	#menuTable td {
-		margin: 0;
-		background-color: none;
-	}
-
-	#menuTable td:hover {
-		background-color: #DCDCDC;
 	}
 
 	#menuLogo {
@@ -139,37 +118,7 @@ html, body {
 		text-align: center;
 	}
 
-	#main {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		min-width: 100%;
-		background-color: #FDFDFD;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-	}
-
-	#mainTable {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 2;
-		background-color: #FAFAFA;
-	}
-
 	#mainTop {
 		height: 94.9px;
-	}
-
-	#content {
-		height: 100%;
-		width: 100%;
-		border: none;
 	}
 }
