@@ -10,7 +10,7 @@ function gpaRecalculate() {
 		if(gpaHonors[i]) newGPA++;
 	}
 	newGPA = newGPA/7;
-	_('gpaText').innerHTML = 'GPA: ' + String(+newGPA.toFixed(2));
+	_('gpaText').innerHTML = 'GPA: ' + (+newGPA.toFixed(2)).toFixed(1);
 }
 
 function gpaArrowHandler(j, t) {
