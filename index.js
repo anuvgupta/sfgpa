@@ -23,11 +23,10 @@ function load() {
 	});
 	$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[0] + "/" + tools[0] + ".css'>");
 	$.getScript('./tools/' + tools[0] + '/' + tools[0] + '.js');
-	if (mobile() && ((screen.width < screen.height) || (window.innerWidth < window.innerHeight))) {
-        viewport.setAttribute("content", "initial-scale=1.3, maximum-scale=1.3");
-	} else if (mobile()) {
-        viewport.setAttribute("content", "initial-scale=1, maximum-scale=1, user-scalable=no");
-    }
+	if (mobile()) {
+		if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) viewport.setAttribute("content", "initial-scale=1.3, maximum-scale=1.3");
+		else viewport.setAttribute("content", "initial-scale=1, maximum-scale=1, user-scalable=no");
+	}
 }
 
 $(document).ready(load);
