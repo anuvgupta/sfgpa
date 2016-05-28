@@ -94,7 +94,7 @@ html, body {
 
 	#menu {
 		position: fixed;
-		height: 250px;
+		height: 25%;
 		width: 100%;
 		background-color: #ECECEC;
 		top: 0;
@@ -107,7 +107,7 @@ html, body {
 	}
 
 	#menuLogo {
-		height: 150px;
+		height: 78px;
 		padding: 2.6px 2.6px 2.6px 2.6px;
 	}
 
