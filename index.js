@@ -17,13 +17,14 @@ function setEvents() {
 	for (var i = 1; i <= tools.length; i++) $('#l' + i).click(lClickHandler(i));
 }
 
-function load() {
-	/*
+function resize() {
 	if (mobile()) {
-		if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) viewport.setAttribute("content", "initial-scale=1.3, maximum-scale=1.3, user-scalable=no");
-		else viewport.setAttribute("content", "initial-scale=1, maximum-scale=1, user-scalable=no");
+		//if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) viewport.setAttribute("content", "initial-scale=1.3, maximum-scale=1.3, user-scalable=no");
+		//else viewport.setAttribute("content", "initial-scale=1, maximum-scale=1, user-scalable=no");
 	}
-	*/
+}
+
+function load() {
 	setEvents();
 	$.get('./tools/' + tools[0] + '/' + tools[0] + '.html', function(data) {
     	_('mainContent').innerHTML = data;
@@ -31,4 +32,6 @@ function load() {
 	$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[0] + "/" + tools[0] + ".css'>");
 	$.getScript('./tools/' + tools[0] + '/' + tools[0] + '.js');
 }
+
+$(window).resize(resize);
 $(document).ready(load);
