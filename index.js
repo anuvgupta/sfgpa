@@ -1,4 +1,4 @@
-var tools = ['home', 'gpa', 'finals'];
+var tools = ['home', 'gpa', 'finals', 'easybib'];
 
 function lClickHandler(j) {
 	return function(event) {
