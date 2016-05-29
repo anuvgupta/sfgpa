@@ -1,1 +1,1 @@
-_('linksFrame').style.height = $(window).height;
+_('linksFrame').style.height = screen.height;
