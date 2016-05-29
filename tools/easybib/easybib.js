@@ -1,1 +1,1 @@
-_('linksFrame').style.height = '100%';
+_('linksFrame').style.height = '1000px';
