@@ -20,7 +20,7 @@ function setEvents() {
 function load() {
 	if (mobile()) {
 		if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) viewport.setAttribute("content", "initial-scale=1.3, maximum-scale=1.3, user-scalable=no");
-		else viewport.setAttribute("content", "initial-scale=1, maximum-scale=1, user-scalable=no");
+		//else viewport.setAttribute("content", "initial-scale=1, maximum-scale=1, user-scalable=no");
 	}
 	setEvents();
 	$.get('./tools/' + tools[0] + '/' + tools[0] + '.html', function(data) {
