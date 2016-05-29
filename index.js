@@ -4,6 +4,7 @@ var menuDown = false;
 
 function lClickHandler(j) {
 	return function(event) {
+		alert('hi');
 		$('.linkTD').css('backgroundColor', '');
 		if (j > 1) _('l' + j).style.backgroundColor = '#C0C0C0';
 		$.get('./tools/' + tools[j - 1] + '/' + tools[j - 1] + '.html', function(data) {
