@@ -4,7 +4,6 @@ var menuDown = false;
 
 function lClickHandler(j) {
 	return function(event) {
-		alert('hi');
 		$('.linkTD').css('backgroundColor', '');
 		if (j > 1) _('l' + j).style.backgroundColor = '#C0C0C0';
 		$.get('./tools/' + tools[j - 1] + '/' + tools[j - 1] + '.html', function(data) {
@@ -12,6 +11,13 @@ function lClickHandler(j) {
 		});
 		$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[j - 1] + "/" + tools[j - 1] + ".css'>");
 		$.getScript('./tools/' + tools[j - 1] + '/' + tools[j - 1] + '.js');
+		if(menuDown) {
+			menuDown = false;
+			_('lSpacer').innerHTML = "<center><span class = 'link'>" + $('#l' + j + ' .link').html(); + '</span></center>';
+			$('#menu').css({'transition':'height 0s ease-in-out', '-moz-transition':'height 0s ease-in-out', '-ms-transition':'height 0s ease-in-out', '-webkit-transition':'height 0s ease-in-out', '-o-transition':'height 0s ease-in-out'});
+			for(var i = 5; i > 0; i--) _('menuTable').deleteRow(i);
+			_('menu').style.height = '80px';
+		}
 	};
 }
 
