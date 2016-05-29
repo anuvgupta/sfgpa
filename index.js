@@ -1,4 +1,4 @@
-var tools = ['home', 'gpa', 'finals', 'words', 'easybib'];
+var tools = ['home', 'gpa', 'finals', 'potatoes', 'words', 'easybib'];
 var windowHeight = window.innerHeight;
 
 function lClickHandler(j) {
