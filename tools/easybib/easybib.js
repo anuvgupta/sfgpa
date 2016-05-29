@@ -1,1 +1,1 @@
-_('linksFrame').style.height = $(document).height;
+_('linksFrame').style.height = $(window).height;
