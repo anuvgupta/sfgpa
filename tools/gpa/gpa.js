@@ -39,7 +39,7 @@ function gpaInit() {
 		$('#gpaR' + (i + 1)).click(gpaArrowHandler(i, 'r'));
 		$('#gpaH' + (i + 1)).click(gpaHonorsHandler(i));
 	}
-	resize();
+	//resize();
 }
 
 function resize() {
