@@ -68,5 +68,5 @@ function resize() {
 	}
 }
 
-$(window).resize(resize);
+//$(window).resize(resize);
 gpaInit();
