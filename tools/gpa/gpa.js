@@ -20,7 +20,7 @@ function gpaArrowHandler(j, t) {
 		else if((gpaCourses[j] < 10) && (t == 'r')) gpaCourses[j]++;
 		_('gpa' + (j + 1)).innerHTML = gpaLetters[gpaCourses[j]];
 		gpaRecalculate();
-		resize();
+		//resize();
 	};
 }
 
