@@ -1,4 +1,5 @@
 var tools = ['home', 'gpa', 'finals', 'easybib'];
+var windowHeight = window.innerHeight;
 
 function lClickHandler(j) {
 	return function(event) {

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script type = 'text/javascript' src = '../../lib/jquery-1.12.4.min.js'></script>
+		<script type = 'text/javascript' src = '../../lib/functions.js'></script>
 		<script type = 'text/javascript'>
-			_('linksFrame').style.height = window.innerHeight;
+			var windowHeight = 705;
+			$(document).ready(function () {
+				_('linksFrame').style.height = windowHeight;
+			});
 		</script>
 		<style type = 'text/css'>
 			#links {

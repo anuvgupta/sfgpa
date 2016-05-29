@@ -1,1 +1,1 @@
-_('linksFrame').style.height = screen.height;
+_('linksFrame').style.height = windowHeight;
