@@ -1,1 +1,1 @@
-_('linksFrame').style.height = 705;
+_('linksFrame').height = 705;
