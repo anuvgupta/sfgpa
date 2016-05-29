@@ -26,7 +26,10 @@ function setEvents() {
 			menuDown = true;
 			$('#menu').css({'transition':'height 0.5s ease-in-out', '-moz-transition':'height 0.5s ease-in-out', '-ms-transition':'height 0.5s ease-in-out', '-webkit-transition':'height 0.5s ease-in-out', '-o-transition':'height 0.5s ease-in-out'});
 			setTimeout(function () { _('menu').style.height = '70%'; }, 1);
-			setTimeout(function () { $('#menuTable tr:last').after("<tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l2' class = 'linkTD'> <center> <span class = 'link'>GPA CALCULATOR</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l3' class = 'linkTD'> <center> <span class = 'link'>FINAL GRADES</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l4' class = 'linkTD'> <center> <span class = 'link'>POTATOES</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l5' class = 'linkTD'> <center> <span class = 'link'>WORD COUNTER</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l6' class = 'linkTD'> <center> <span class = 'link'>EASYBIB CITE</span> </center> </td> </tr>"); }, 10);
+			setTimeout(function () {
+				$('#menuTable tr:last').after("<tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l2' class = 'linkTD'> <center> <span class = 'link'>GPA CALCULATOR</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l3' class = 'linkTD'> <center> <span class = 'link'>FINAL GRADES</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l4' class = 'linkTD'> <center> <span class = 'link'>POTATOES</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l5' class = 'linkTD'> <center> <span class = 'link'>WORD COUNTER</span> </center> </td> </tr> <tr height = '16.6%'> <td width = '88%' colspan = '3' id = 'l6' class = 'linkTD'> <center> <span class = 'link'>EASYBIB CITE</span> </center> </td> </tr>");
+				for (var i = 1; i <= tools.length; i++) $('#l' + i).click(lClickHandler(i));
+			}, 10);
 		}
 	});
 }
