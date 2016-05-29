@@ -1,1 +1,1 @@
-_('linksFrame').style.height = '1000px';
+_('linksFrame').style.height = $(document).height;
