@@ -47,7 +47,7 @@ function setEvents() {
 
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
-		alert('hi');
+		alert(screen.width +'<'+ screen.height);
 		mobile = true;
 		_('menu').style.height = '80px';
 		_('menuTable').innerHTML = mobileMenu;
