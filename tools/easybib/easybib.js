@@ -1,1 +1,1 @@
-_('linksFrame').style.height = windowHeight;
+_('linksFrame').style.height = 705;
