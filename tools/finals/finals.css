@@ -5,7 +5,7 @@
 #finalsTable { font-size: 30px; text-align: center; padding: 15px; }
 #finalsTable td { padding: 6px; }
 .finalsButton { font-size: 35px; background-color: #444444; color: #D2D2D2; padding: 13px 25px 13px 25px; }
-#finalsOr { font-size: 14px; }
+#finalsOr { font-size: 34px; }
 #finals input { padding: 5px 0 5px 0; width: 120px; text-align: center; border: 2px solid #EEEEEE; background-color: #F0F0F0; font: 23px Courier New, verdana, sans-serif; }
 #finalsLetter { font-size: 43px; }
 #finalsOutput { color: green; font-weight: bold; background-color: #F0F0F0; padding: 6px 15px 6px 15px; }
