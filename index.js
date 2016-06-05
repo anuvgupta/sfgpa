@@ -55,7 +55,7 @@ function resize() {
 	} else {
 		mobile = false;
 		_('menu').style.height = '73px';
-		//_('menuTable').innerHTML = largeMenu;
+		_('menuTable').innerHTML = largeMenu;
 		setEvents();
 	}
 }
