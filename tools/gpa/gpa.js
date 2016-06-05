@@ -45,7 +45,6 @@ function gpaInit() {
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
 		if (mobile) {
-			alert('mobileSmall');
 			_('gpa').style.fontSize = '32px';
 			_('gpaTitle').style.fontSize = '40px';
 			_('gpa').style.fontSize = '32px';
