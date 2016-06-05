@@ -65,6 +65,11 @@ function finalsInit() {
 		_('newInput').value = temp;
 		finalsRecalculate();
 	});
+	$('.finalsButton').hover(function () {
+		$(this).css('background-color', '#565656');
+	}, function () {
+		$(this).css('background-color', '#444444');
+	});
 }
 
 finalsInit();
