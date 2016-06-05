@@ -65,10 +65,15 @@ function finalsInit() {
 		_('newInput').value = temp;
 		finalsRecalculate();
 	});
-	$('.finalsButton').hover(function () {
-		$(this).css('background-color', '#565656');
+	$('#finalCalcB').hover(function() {
+		if (mode != 1) _('finalCalcB').backgroundColor = '#565656';
 	}, function () {
-		$(this).css('background-color', '#444444');
+		if (mode != 1) _('finalCalcB').backgroundColor = '#444444';
+	});
+	$('#gradeCalcB').hover(function() {
+		if (mode != 2) _('gradeCalcB').backgroundColor = '#565656';
+	}, function () {
+		if (mode != 2) _('gradeCalcB').backgroundColor = '#444444';
 	});
 }
 
