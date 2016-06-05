@@ -31,11 +31,11 @@ function setEvents() {
 			if(menuDown) {
 				menuDown = false;
 				$('#menu').css({'transition':'height 0s ease-in-out', '-moz-transition':'height 0s ease-in-out', '-ms-transition':'height 0s ease-in-out', '-webkit-transition':'height 0s ease-in-out', '-o-transition':'height 0s ease-in-out'});
-				for(var i = 5; i > 0; i--) _('menuTable').deleteRow(i);
+				for(var i = 4; i > 0; i--) _('menuTable').deleteRow(i);
 				_('menu').style.height = '80px';
 			} else {
 				menuDown = true;
-				$('#menu').css({'transition':'height 0.5s ease-in-out', '-moz-transition':'height 0.5s ease-in-out', '-ms-transition':'height 0.5s ease-in-out', '-webkit-transition':'height 0.5s ease-in-out', '-o-transition':'height 0.5s ease-in-out'});
+				$('#menu').css({'transition':'height 0.35s ease-in-out', '-moz-transition':'height 0.35s ease-in-out', '-ms-transition':'height 0.35s ease-in-out', '-webkit-transition':'height 0.35s ease-in-out', '-o-transition':'height 0.35s ease-in-out'});
 				setTimeout(function () { _('menu').style.height = '70%'; }, 1);
 				setTimeout(function () {
 					$('#menuTable tr:last').after(mobileRows);
