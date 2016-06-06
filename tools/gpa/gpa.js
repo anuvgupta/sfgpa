@@ -56,7 +56,7 @@ function resize() {
 			$('.gpaH').css('padding', '0 7px 0 7px');
 			$('#gpa td').css('font-size', '24px');
 		} else {
-			alert('small');
+			//alert('small');
 			_('gpa').style.fontSize = '37px';
 			_('gpaTitle').style.fontSize = '47px';
 			_('gpa').style.fontSize = '37px';
