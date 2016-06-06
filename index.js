@@ -35,13 +35,13 @@ function setEvents() {
 				_('menuHamburger').src = './img/hamburger.png';
 				$('#menu').css({'transition':'height 0s ease-in-out', '-moz-transition':'height 0s ease-in-out', '-ms-transition':'height 0s ease-in-out', '-webkit-transition':'height 0s ease-in-out', '-o-transition':'height 0s ease-in-out'});
 				for(var i = 4; i > 0; i--) _('menuTable').deleteRow(i);
-				_('menu').style.height = '80px';
+				_('menu').style.height = '73px';
 				$('.link').css('fontSize', '0');
 			} else {
 				menuDown = true;
 				_('menuHamburger').src = './img/down.png';
 				$('#menu').css({'transition':'height 0.35s ease-in-out', '-moz-transition':'height 0.35s ease-in-out', '-ms-transition':'height 0.35s ease-in-out', '-webkit-transition':'height 0.35s ease-in-out', '-o-transition':'height 0.35s ease-in-out'});
-				setTimeout(function () { _('menu').style.height = '70%'; }, 1);
+				setTimeout(function () { _('menu').style.height = '65%'; }, 1);
 				setTimeout(function () {
 					$('#menuTable tr:last').after(mobileRows);
 					for (var i = 1; i <= tools.length; i++) $('#l' + i).click(lClickHandler(i));
@@ -55,7 +55,7 @@ function setEvents() {
 function resize() {
 	if (window.innerWidth < window.innerHeight) {
 		mobileView = true;
-		_('menu').style.height = '80px';
+		_('menu').style.height = '73px';
 		_('menuTable').innerHTML = mobileMenu;
 		var curL = curTool + 1;
 		if (mobileView) _('lSpacer').innerHTML = "<center><span id = 'mobileTitle'>" + $('#l' + curL + ' .link').html(); + '</span></center>';
