@@ -8,6 +8,17 @@ html, body {
 	color: #777777;
 	font-size: 19px;
 	text-decoration: none;
+	transition: font-size 0.35s ease-in-out;
+	-moz-transition: font-size 0.35s ease-in-out;
+	-ms-transition: font-size 0.35s ease-in-out;
+	-webkit-transition: font-size 0.35s ease-in-out;
+	-o-transition: font-size 0.35s ease-in-out;
+}
+
+#mobileTitle {
+	color: #777777;
+	font-size: 19px;
+	text-decoration: none;
 }
 
 #menu {
@@ -52,6 +63,7 @@ html, body {
 	padding: 0 10px 0 10px;
 	text-align: center;
 	background-color: #ECECEC;
+	
 }
 
 .linkTD:hover {
