@@ -10,7 +10,7 @@ var mobileView = false;
 function lClickHandler(j) {
 	return function(event) {
 		$('.linkTD').css('backgroundColor', '');
-		_('menuHamburger').src = './img/hamburger.png';
+		if (mobileView) _('menuHamburger').src = './img/hamburger.png';
 		if (j > 1) _('l' + j).style.backgroundColor = '#C0C0C0';
 		curTool = j - 1;
 		$.get('./tools/' + tools[curTool] + '/' + tools[curTool] + '.html', function(data) {
