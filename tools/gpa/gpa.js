@@ -43,7 +43,6 @@ function gpaInit() {
 }
 
 function resize() {
-	alert('small');
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
 		if (mobile()) {
 			_('gpa').style.fontSize = '32px';
