@@ -19,7 +19,6 @@ function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
     _('wordsTitle').style.fontSize = '47px';
     _('wordsSmall').innerHTML = '';
-    console.log('hi');
 	} else {
     _('wordsTitle').style.fontSize = '53px';
     _('wordsSmall').innerHTML = '<br/>';
