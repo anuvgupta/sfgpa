@@ -77,4 +77,13 @@ function finalsInit() {
 	});
 }
 
+function resize() {
+	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
+
+	} else {
+
+  }
+}
+
+$(window).resize(resize);
 finalsInit();
