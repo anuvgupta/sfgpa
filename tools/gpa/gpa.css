@@ -1,10 +1,48 @@
-#gpa { font: 43px Courier New, verdana, sans-serif; padding: 7; background-color: #FAFAFA; }
-#gpaTitle { font-size: 53px; text-align: center; font-weight: bold; }
-#gpa form { padding: 24px 0 0 0; }
-#gpa td { text-align: center; }
-.gpaTHead { font-size: 32px; }
-.gpaA { height: 30px; padding: 0 20px 0 20px; opacity: 0.6; }
-.gpaA:hover { opacity: 0.8; }
-.gpaH { height: 32px; padding: 0 20px 0 20px; opacity: 0.8; }
-.gpaH:hover { opacity: 0.7; }
-#gpaText { color: green; font-size: 45px; }
+#gpa {
+  font: 43px Courier New, verdana, sans-serif;
+  padding: 7;
+  background-color: #FAFAFA;
+}
+
+#gpaTitle {
+  font-size: 53px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#gpa form {
+  padding: 24px 0 0 0;
+}
+
+#gpa td {
+  text-align: center;
+}
+
+.gpaTHead {
+  font-size: 32px;
+}
+
+.gpaA {
+  height: 30px;
+  padding: 0 20px 0 20px;
+  opacity: 0.6;
+}
+
+.gpaA:hover {
+  opacity: 0.8;
+}
+
+.gpaH {
+  height: 32px;
+  padding: 0 20px 0 20px;
+  opacity: 0.8;
+}
+
+.gpaH:hover {
+  opacity: 0.7;
+}
+
+#gpaText {
+  color: green;
+  font-size: 45px;
+}

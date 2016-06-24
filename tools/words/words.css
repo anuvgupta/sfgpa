@@ -1,4 +1,21 @@
-#home { font: 46px Courier New, verdana, sans-serif; padding: 7; background-color: #FAFAFA; }
-#homeTitle { font-size: 70px; font-weight: bold; }
-#homeImg { height: 200px; }
-#homeText { font-size: 40px; }
+#words {
+  font: 43px Courier New, verdana, sans-serif;
+  padding: 7;
+  background-color: #FAFAFA;
+}
+
+#wordsTitle {
+  font-size: 53px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#wordsTA {
+  height: 70%;
+  width: 90%;
+  font-size: 40px;
+}
+
+#wordsData {
+  font-size: 35px;
+}

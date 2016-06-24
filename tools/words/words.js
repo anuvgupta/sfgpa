@@ -1,1 +1,6 @@
 
+function wordsInit() {
+  
+}
+
+wordsInit();
