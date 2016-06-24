@@ -16,6 +16,7 @@ function wordsInit() {
 }
 
 function resize() {
+  alert('hi');
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
     _('wordsTitle').style.fontSize = '47px';
     _('wordsSmall').innerHTML = '';
