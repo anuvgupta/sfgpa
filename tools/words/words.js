@@ -12,12 +12,13 @@ function wordsInit() {
     _('wordsWordCount').innerHTML = wordCount.toString();
     _('wordsCharCount').innerHTML = wordsText.length.toString();
   });
+  resize();
 }
 
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
     _('wordsTitle').style.fontSize = '47px';
-    _('wordsSmall').style.fontSize = '12px';
+    _('wordsSmall').style.fontSize = '1px';
 	}
 }
 
