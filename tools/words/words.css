@@ -10,8 +10,12 @@
   font-weight: bold;
 }
 
+#wordsSmall {
+  font-size: 20px;
+}
+
 #wordsTA {
-  height: 500px;
+  height: 400px;
   width: 80%;
   font: 25px Courier New, verdana, sans-serif;
   outline: none;
