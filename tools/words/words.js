@@ -26,5 +26,5 @@ function resize() {
   }
 }
 
-//$(window).resize(resize);
+$(window).resize(resize);
 wordsInit();
