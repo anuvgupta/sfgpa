@@ -13,9 +13,16 @@
 #wordsTA {
   height: 70%;
   width: 90%;
-  font-size: 40px;
+  font: 25px Courier New, verdana, sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  padding: 22px;
+  color: #545454;
 }
 
 #wordsData {
   font-size: 35px;
+  padding: 0 5px 8px 5px;
 }
