@@ -18,8 +18,11 @@ function wordsInit() {
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
     _('wordsTitle').style.fontSize = '47px';
-    _('wordsSmall').style.fontSize = '1px';
-	}
+    _('wordsSmall').innerHTML = '';
+	} else {
+    _('wordsTitle').style.fontSize = '53px';
+    _('wordsSmall').innerHTML = '<br/>';
+  }
 }
 
 $(window).resize(resize);
