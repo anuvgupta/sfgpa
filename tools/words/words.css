@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+#wordsTiny {
+  font-size: 8px;
+}
+
 #wordsTitle {
   font-size: 53px;
   text-align: center;
