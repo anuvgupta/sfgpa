@@ -63,7 +63,7 @@ html, body {
 	padding: 0 10px 0 10px;
 	text-align: center;
 	background-color: #ECECEC;
-	
+
 }
 
 .linkTD:hover {
@@ -117,7 +117,7 @@ html, body {
 	height: 73px;
 }
 
-#content {
+#mainContent {
 	height: 100%;
 	width: 100%;
 	border: none;

@@ -8,7 +8,7 @@ var menuDown = false;
 var mobileView = false;
 
 function lClickHandler(j) {
-	return function(event) {
+	return function (event) {
 		$('.linkTD').css('backgroundColor', '');
 		if (mobileView) _('menuHamburger').src = './img/hamburger.png';
 		if (j > 1) _('l' + j).style.backgroundColor = '#C0C0C0';
