@@ -18,7 +18,8 @@ function lClickHandler(j) {
 		});
 		$('head').append("<link rel = 'stylesheet' type = 'text/css' href = './tools/" + tools[curTool] + "/" + tools[curTool] + ".css'>");
 		$.getScript('./tools/' + tools[curTool] + '/' + tools[curTool] + '.js');
-		if(menuDown) {
+		if (j == 1) _('lSpacer').innerHTML = "<center><span id = 'mobileTitle'>" + toolNames[0] + "</span></center>";
+		if (menuDown) {
 			menuDown = false;
 			_('lSpacer').innerHTML = "<center><span id = 'mobileTitle'>" + toolNames[curTool] + '</span></center>';
 			$('#menu').css({'transition':'height 0s ease-in-out', '-moz-transition':'height 0s ease-in-out', '-ms-transition':'height 0s ease-in-out', '-webkit-transition':'height 0s ease-in-out', '-o-transition':'height 0s ease-in-out'});
@@ -34,14 +35,25 @@ function setEvents() {
 			if(menuDown) {
 				menuDown = false;
 				_('menuHamburger').src = './img/hamburger.png';
-				$('#menu').css({'transition':'height 0s ease-in-out', '-moz-transition':'height 0s ease-in-out', '-ms-transition':'height 0s ease-in-out', '-webkit-transition':'height 0s ease-in-out', '-o-transition':'height 0s ease-in-out'});
+				$('#menu').css({
+					'transition':'height 0s ease-in-out',
+					'-moz-transition':'height 0s ease-in-out',
+					'-ms-transition':'height 0s ease-in-out',
+					'-webkit-transition':'height 0s ease-in-out',
+					'-o-transition':'height 0s ease-in-out'
+				});
 				for(var i = 4; i > 0; i--) _('menuTable').deleteRow(i);
 				_('menu').style.height = '73px';
 				$('.link').css('fontSize', '0');
 			} else {
 				menuDown = true;
 				_('menuHamburger').src = './img/down.png';
-				$('#menu').css({'transition':'height 0.35s ease-in-out', '-moz-transition':'height 0.35s ease-in-out', '-ms-transition':'height 0.35s ease-in-out', '-webkit-transition':'height 0.35s ease-in-out', '-o-transition':'height 0.35s ease-in-out'});
+				$('#menu').css({'transition':'height 0.35s ease-in-out',
+					'-moz-transition':'height 0.35s ease-in-out',
+					'-ms-transition':'height 0.35s ease-in-out',
+					'-webkit-transition':'height 0.35s ease-in-out',
+					'-o-transition':'height 0.35s ease-in-out'
+				});
 				setTimeout(function () { _('menu').style.height = '65%'; }, 1);
 				setTimeout(function () {
 					$('#menuTable tr:last').after(mobileRows);
