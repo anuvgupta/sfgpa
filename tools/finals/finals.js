@@ -81,9 +81,11 @@ function finalsInit() {
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
 		_('finalsOr').innerHTML = '<br/>or<br/>';
+		_('finalsTitle').style.fontSize = '43px';
 		$('.finalsButton').css('font-size', '25px');
 	} else {
 		_('finalsOr').innerHTML = 'or';
+		_('finalsTitle').style.fontSize = '53px';
 		$('.finalsButton').css('font-size', '35px');
   }
 }
