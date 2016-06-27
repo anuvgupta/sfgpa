@@ -41,29 +41,33 @@ function finalsInit() {
 	});
 	_('finalCalcB').style.backgroundColor = '#707070';
 	$('#finalCalcB').click(function() {
-		mode = 1;
-		_('finalCalcB').style.backgroundColor = '#707070';
-		_('gradeCalcB').style.backgroundColor = '#444444';
-		_('finalDesc').innerHTML = 'FINAL TEST GRADE YOU NEED';
-		_('finalsInputDesc').innerHTML = 'Desired Class Grade';
-		var temp = _('finalsOutput').innerHTML;
-		temp = temp.substring(0, temp.length - 1);
-		console.log(temp);
-		_('finalsOutput').innerHTML = _('newInput').value + '%';
-		_('newInput').value = temp;
-		finalsRecalculate();
+		if (mode != 1) {
+			mode = 1;
+			_('finalCalcB').style.backgroundColor = '#707070';
+			_('gradeCalcB').style.backgroundColor = '#444444';
+			_('finalDesc').innerHTML = 'FINAL TEST GRADE YOU NEED';
+			_('finalsInputDesc').innerHTML = 'Desired Class Grade';
+			var temp = _('finalsOutput').innerHTML;
+			temp = temp.substring(0, temp.length - 1);
+			console.log(temp);
+			_('finalsOutput').innerHTML = _('newInput').value + '%';
+			_('newInput').value = temp;
+			finalsRecalculate();
+		}
 	});
 	$('#gradeCalcB').click(function() {
-		mode = 2;
-		_('finalCalcB').style.backgroundColor = '#444444';
-		_('gradeCalcB').style.backgroundColor = '#707070';
-		_('finalDesc').innerHTML = 'CLASS GRADE AFTER FINAL TEST';
-		_('finalsInputDesc').innerHTML = 'Final Test Grade';
-		var temp = _('finalsOutput').innerHTML;
-		temp = temp.substring(0, temp.length - 1);
-		_('finalsOutput').innerHTML = _('newInput').value + '%';
-		_('newInput').value = temp;
-		finalsRecalculate();
+		if (mode != ) {
+			mode = 2;
+			_('finalCalcB').style.backgroundColor = '#444444';
+			_('gradeCalcB').style.backgroundColor = '#707070';
+			_('finalDesc').innerHTML = 'CLASS GRADE AFTER FINAL TEST';
+			_('finalsInputDesc').innerHTML = 'Final Test Grade';
+			var temp = _('finalsOutput').innerHTML;
+			temp = temp.substring(0, temp.length - 1);
+			_('finalsOutput').innerHTML = _('newInput').value + '%';
+			_('newInput').value = temp;
+			finalsRecalculate();
+		}
 	});
 	$('#finalCalcB').hover(function() {
 		if (mode != 1) $('#finalCalcB').css('background-color', '#565656');
