@@ -79,9 +79,9 @@ function finalsInit() {
 
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
-
+		_('finalsOr').innerHTML = '<br/>or<br/>';
 	} else {
-
+		_('finalsOr').innerHTML = 'or';
   }
 }
 
