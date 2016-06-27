@@ -75,6 +75,7 @@ function finalsInit() {
 	}, function () {
 		if (mode != 2) $('#gradeCalcB').css('background-color', '#444444');
 	});
+	resize();
 }
 
 function resize() {
