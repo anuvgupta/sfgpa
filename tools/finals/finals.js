@@ -56,7 +56,7 @@ function finalsInit() {
 		}
 	});
 	$('#gradeCalcB').click(function() {
-		if (mode != ) {
+		if (mode != 2) {
 			mode = 2;
 			_('finalCalcB').style.backgroundColor = '#444444';
 			_('gradeCalcB').style.backgroundColor = '#707070';
