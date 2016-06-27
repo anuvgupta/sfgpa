@@ -1,4 +1,4 @@
-var mode = 1;
+var mode = 0;
 var fWorth = 15.00;
 var currPrevG = 94.49;
 var desNewG = 92.50;
