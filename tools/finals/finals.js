@@ -51,7 +51,7 @@ function finalsInit() {
 		console.log(temp);
 		_('finalsOutput').innerHTML = _('newInput').value + '%';
 		_('newInput').value = temp;
-		//finalsRecalculate();
+		finalsRecalculate();
 	});
 	$('#gradeCalcB').click(function() {
 		mode = 2;
