@@ -81,8 +81,10 @@ function finalsInit() {
 function resize() {
 	if ((screen.width < screen.height) || (window.innerWidth < window.innerHeight)) {
 		_('finalsOr').innerHTML = '<br/>or<br/>';
+		$('.finalsButton').css('font-size', '25px');
 	} else {
 		_('finalsOr').innerHTML = 'or';
+		$('.finalsButton').css('font-size', '35px');
   }
 }
 
