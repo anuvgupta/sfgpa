@@ -1,5 +1,5 @@
 # SFGPA
-A collection of web-based, easy to use, mobile-friendly tools that students can use to calculate their grades and such.  
+A collection of web-based, easy to use, mobile-friendly tools that students can use to calculate their grades.  
 Based on the Saint Francis High School grading system.  
 &nbsp;&nbsp;<sub>*Formerly known as* ***student-tools***</sub>  
 *Check it out at [anuv.tk/sfgpa](http://anuv.tk/sfgpa)*  
