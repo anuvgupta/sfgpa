@@ -1,0 +1,356 @@
+    *
+
+// sfgpa blockfile
+
+// define custom blocks
+!break
+    init
+        {
+            return Block('span').add('br');
+        }
+    load
+        {
+            data('val', function (val) {
+                for (var i = 1; i < val; i++)
+                    block.add('br');
+            });
+        }
+!text
+    init
+        {
+            return Block('span');
+        }
+    load
+        {
+            data('val', function (val) {
+                block.node().appendChild(document.createTextNode(val));
+            });
+            data('html', function (html) {
+                block.html(html);
+            });
+        }
+!image
+    init
+        {
+            return Block('div');
+        }
+    load
+        {
+            var src = data('src');
+            var height = data('height');
+            var width = data('width');
+            var alt = data('alt');
+            if (src != null) {
+                block.css('background-image', "url('" + src + "')")
+                    .css('background-repeat', 'no-repeat')
+                    .css('background-size', 'contain')
+                ;
+            }
+            if (height !== null) block.css('height', height);
+            else block.css('height', 'auto');
+            if (width !== null) block.css('width', width);
+            else block.css('width', 'auto');
+            if (alt !== null) block.attribute('title', alt);
+        }
+// app UI content layer
+app
+    #gpa
+        {
+            block.child('panels/gpa/wrap/gpa/text').html('GPA ' + gpa);
+        }
+    css
+        height 100%
+        width 100%
+        margin 0
+        border none
+    div menu
+        css
+            top 0
+            right 0
+            left 0
+            width 100%
+            height 100px
+            position absolute
+            z-index 1
+        div buttons
+            css
+                margin 0 auto
+                height 100%
+                background-color #EEE
+                border 1px solid #DDD
+            @query window width < 500
+                css
+                    width 100%
+                    border-radius 0
+            @query window width >= 500
+                css
+                    width 350px
+                    border-radius 0 0 12px 12px
+            !menu-button
+                init
+                    {
+                        var block = Block('block')
+                            .css({
+                                height: '100%',
+                                display: 'inline-table',
+                                cursor: 'pointer'
+                            })
+                            .add(Block('div', 'text')
+                                .add(Block('text', 1)
+                                    .css({
+                                        color: '#696969',
+                                        fontSize: '28px',
+                                        textTransform: 'uppercase'
+                                    })
+                                )
+                            )
+                            .query('window width != 0', function () {
+                                block.css('width', (block.parent().$().width() / 2 - 1) + 'px');
+                            })
+                            .on('active', function (e, b) {
+                                b.css('background-color', '#E5E5E5');
+                            })
+                            .on('inactive', function (e, b) {
+                                b.css('background-color', 'rgba(0, 0, 0, 0)');
+                            })
+                            .on('click', function (e, b) {
+                                var siblings = b.siblings()
+                                for (var s in siblings) {
+                                    if (siblings.hasOwnProperty(s))
+                                        siblings[s].on('inactive');
+                                }
+                                b.on('active');
+                            })
+                        ;
+                        return block;
+                    }
+                load
+                    {
+                        data('val', function (val) {
+                            block.child('text/text').data(val);
+                        });
+                        data('panel', function (panel) {
+                            block.on('click', function () {
+                                if (Block.is.obj(window.block.child('panels/' + panel))) {
+                                    var panels = window.block.child('panels').children();
+                                    for (var p in panels) {
+                                        if (panels.hasOwnProperty(p)) panels[p].on('hide');
+                                    }
+                                    window.block.child('panels/' + panel).on('show');
+                                }
+                            });
+                        });
+                    }
+            menu-button gpa
+                val GPA
+                panel gpa
+                css
+                    border-radius 0 0 0 12px
+                    border-right 1px solid #DDD
+            menu-button finals
+                val Finals
+                panel finals
+                css
+                    border-radius 0 0 12px 0
+                    border-left 1px solid #DDD
+    div panels
+        css
+            top 0
+            right 0
+            left 0
+            bottom 0
+            width 100%
+            height 100%
+            position absolute
+        div gpa
+            css
+                display none
+            :hide
+                css
+                    display none
+            :show
+                css
+                    display block
+            div wrap
+                css
+                    margin-top 170px
+                    text-align center
+                text title
+                    css
+                        display block
+                        font-size 46px
+                        text-transform uppercase
+                    val gpa calculator
+                break br1
+                    // break
+                table table
+                    id gpaTable
+                    css
+                        margin 0 auto
+                        font-size 30px
+                    tr head
+                        td title1
+                            text text
+                                val CLASS
+                        td title2
+                            text text
+                                val GRADE
+                        td title3
+                            text text
+                                val H|AP
+                    {
+                        var leftHandle = function (r) {
+                            return function (e, b) {
+                                if (window.grades[r].grade > 0) window.grades[r].grade--;
+                                var letter = window.scale.order[window.grades[r].grade];
+                                b.sibling('letter').html('&nbsp;' + letter + (letter.length > 1 ? '' : '&nbsp;'));
+                                updateGPA();
+                            };
+                        };
+                        var rightHandle = function (r) {
+                            return function (e, b) {
+                                if (window.grades[r].grade < 10) window.grades[r].grade++;
+                                var letter = window.scale.order[window.grades[r].grade];
+                                b.sibling('letter').html('&nbsp;' + letter + (letter.length > 1 ? '' : '&nbsp;'));
+                                updateGPA();
+                            };
+                        };
+                        var apHandle = function (r) {
+                            return function (e, b) {
+                                window.grades[r].ap = !window.grades[r].ap;
+                                if (window.grades[r].ap === true) b.data({
+                                    src: 'img/box2.png',
+                                    height: '35px',
+                                    width: '35px'
+                                });
+                                else b.data({
+                                    src: 'img/box.png',
+                                    height: '35px',
+                                    width: '35px'
+                                });
+                                updateGPA();
+                            };
+                        };
+                        for (var r = 0; r < 7; r++) {
+                            block.add(Block('tr', String(r))
+                                .key('id', r)
+                                .add(Block('td', 'class')
+                                    .add(Block('text', 1)
+                                        .data(String(r + 1))
+                                        .css('font-size', '35px')
+                                    )
+                                )
+                                .add(Block('td', 'grade')
+                                    .add(Block('image', 'left')
+                                        .data({
+                                            src: 'img/leftArrow.png',
+                                            height: '35px',
+                                            width: '35px',
+                                            css: {
+                                                display: 'inline-block',
+                                                cursor: 'pointer'
+                                            }
+                                        })
+                                        .on('mouseover', function (e, b) {
+                                            b.css('opacity', '0.8');
+                                        })
+                                        .on('mouseout', function (e, b) {
+                                            b.css('opacity', '0.6');
+                                        })
+                                        .on('mouseout')
+                                        .on('click', leftHandle(r))
+                                    )
+                                    .add(Block('text', 'letter')
+                                        .css({
+                                            display: 'inline-block',
+                                            font: '50px Courier, monospace'
+                                        })
+                                        .html('&nbsp;A&nbsp;')
+                                        .query('window width < 550', function () {
+                                            block.css('padding', '0');
+                                        })
+                                        .query('window width >= 550', function () {
+                                            block.css('padding', '0 15px 0 15px');
+                                        })
+                                    )
+                                    .add(Block('image', 'right')
+                                        .data({
+                                            src: 'img/rightArrow.png',
+                                            height: '35px',
+                                            width: '35px',
+                                            css: {
+                                                display: 'inline-block',
+                                                cursor: 'pointer'
+                                            }
+                                        })
+                                        .on('mouseover', function (e, b) {
+                                            b.css('opacity', '0.8');
+                                        })
+                                        .on('mouseout', function (e, b) {
+                                            b.css('opacity', '0.6');
+                                        })
+                                        .on('mouseout')
+                                        .on('click', rightHandle(r))
+                                    )
+                                )
+                                .add(Block('td', 'ap')
+                                    .add(Block('image', 1)
+                                        .data({
+                                            src: 'img/box.png',
+                                            height: '35px',
+                                            width: '35px',
+                                            css: {
+                                                margin: '0 auto',
+                                                cursor: 'pointer'
+                                            }
+                                        })
+                                        .on('mouseover', function (e, b) {
+                                            b.css('opacity', '1');
+                                        })
+                                        .on('mouseout', function (e, b) {
+                                            b.css('opacity', '0.85');
+                                        })
+                                        .on('mouseout')
+                                        .on('click', apHandle(r))
+                                    )
+                                )
+                            );
+                        }
+                    }
+                div gpa
+                    break br
+                        // break
+                    text text
+                        val GPA 4.00
+                        css
+                            font-size 47px
+                            color green
+                            font-weight bold
+        div finals
+            css
+                display none
+            :hide
+                css
+                    display none
+            :show
+                css
+                    display block
+            div wrap
+                css
+                    margin-top 170px
+                    text-align center
+                text title
+                    css
+                        display block
+                        font-size 46px
+                        text-transform uppercase
+                    val final grade calculator
+                text soon
+                    val Coming soon!
+                    css
+                        display block
+                        margin-top 50px
+                        font-size 35px
+    {
+        block.child('menu/buttons/gpa').on('click');
+    }

@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Student Tools</title>
-		<meta id = 'viewport' name = 'viewport' content = 'width=device-width, initial-scale=1.05, maximum-scale=1.05, user-scalable=no'/>
-		<link rel = 'icon' type = 'image/png' href = './img/logo/favLogo.png'/>
-		<link rel = 'stylesheet' type = 'text/css' href = './index.css'/>
-		<script type = 'text/javascript' src = './js/jquery-1.12.4.min.js'></script>
-		<script type = 'text/javascript' src = './js/functions.js'></script>
-		<script type = 'text/javascript' src = './index.js'></script>
-	</head>
-	<body>
-		<div id = 'menu'>
-			<table id = 'menuTable'></table>
-		</div>
-		<div id = 'main'>
-			<table id = 'mainTable'>
-				<tr>
-					<td id = 'mainTop'></td>
-				</tr>
-				<tr>
-					<td id = 'mainContent'></td>
-				</tr>
-			</table>
-		</div>
-	</body>
+<html lang = 'en'>
+    <head>
+        <title>SFGPA</title>
+        <meta charset = 'utf-8'/>
+        <meta name = 'author' content = 'Anuv Gupta'/>
+        <meta name = 'copyright' content = 'Copyright (c) 2016 Anuv Gupta'/>
+        <meta name = 'viewport' content = 'width=device-width, initial-scale=0.65, maximum-scale=0.75, user-scalable=yes'/>
+        <link rel = 'icon' type = 'image/png' href = 'img/logo.png'/>
+        <style type = 'text/css'>
+            * {
+                font-family: Trebuchet, Verdana, Helvetica, sans-serif;
+            }
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+            }
+            #gpaTable td {
+                padding: 2px 25px 2px 25px;
+            }
+        </style>
+        <script type = 'text/javascript' src = 'js/jquery-1.12.4.min.js'></script>
+        <script type = 'text/javascript' src = 'js/block.min.js'></script>
+        <script type = 'text/javascript' src = 'app.js'></script>
+    </head>
+    <body>
+        <!-- sfgpa -->
+        <div id = 'loading' style = 'position: absolute; top: 0; left; 0; width: 100%; height: 100%; display: table; text-align: center; opacity: 1; transition: opacity 0.1s ease;'>
+            <div style = 'display: table-cell; vertical-align: middle; margin: 0 auto;'>
+                <img src = 'img/logo.png' style = 'width: 45%; max-width: 120px;'/>
+            </div>
+        </div>
+    </body>
 </html>
