@@ -58,6 +58,10 @@ app
         {
             block.child('panels/gpa/wrap/gpa/text').html('GPA ' + gpa);
         }
+    #finals
+        {
+            block.child('panels/finals/wrap/final/output').html(String(finals.toFixed(2)) + '%');
+        }
     css
         height 100%
         width 100%
@@ -263,7 +267,8 @@ app
                                     .add(Block('text', 'letter')
                                         .css({
                                             display: 'inline-block',
-                                            font: '50px Courier, monospace'
+                                            font: '49px Courier New, Courier, monospace',
+                                            fontWeight: 'normal'
                                         })
                                         .html('&nbsp;A&nbsp;')
                                         .query('window width < 550', function () {
@@ -345,12 +350,181 @@ app
                         font-size 46px
                         text-transform uppercase
                     val final grade calculator
-                text soon
-                    val Coming soon!
+                break br
+                    // break
+                !input-line
+                    init
+                        {
+                            var block = Block('tr');
+                            block.add(Block('td', 'line')
+                                .add(Block('text', 1)
+                                    .css({
+                                        fontSize: '25px',
+                                        padding: '0'
+                                    })
+                                )
+                            )
+                            .add(Block('td', 'input')
+                                .add(Block('input', 1)
+                                    .css({
+                                        width: '90px',
+                                        height: '40px',
+                                        backgroundColor: '#EEE',
+                                        borderRadius: '4px',
+                                        border: 'none',
+                                        outline: 'none',
+                                        padding: '2px 10px',
+                                        font: '25px Courier New, Courier, monospace',
+                                        textAlign: 'center',
+                                        color: '#303030'
+                                    })
+                                )
+                            );
+                            return block;
+                        }
+                    load
+                        {
+                            data('val', function (val) {
+                                block.child('line/text').html(val);
+                            });
+                            data('default', function (def) {
+                                block.child('input/input').node().value = def;
+                            });
+                        }
+                table table
+                    id finalsTable
                     css
-                        display block
-                        margin-top 50px
-                        font-size 35px
+                        margin 6px auto
+                        width 450px
+                    input-line worth
+                        val Final Test Worth
+                        default 15.00
+                        :change, keyup, keydown
+                            {
+                                var val = block.child('input/input').node().value;
+                                if (!isNaN(val)) window.finalworth = parseFloat(val);
+                                updateFinals();
+                            }
+                    input-line current
+                        val Current Class Grade
+                        default 98.00
+                        :change, keyup, keydown
+                            {
+                                var val = block.child('input/input').node().value;
+                                if (!isNaN(val)) window.currentgrade = parseFloat(val);
+                                updateFinals();
+                            }
+                    tr choice
+                        td td
+                            colspan 2
+                            css
+                                height 50px
+                                padding-top 10px
+                                padding-bottom 10px
+                            !button
+                                init
+                                    {
+                                        var block = Block('block');
+                                        block.css({
+                                            width: '50%',
+                                            display: 'inline-table',
+                                            cursor: 'pointer'
+                                        })
+                                        .on('active', function () {
+                                            block.css('background-color', '#DDD');
+                                        })
+                                        .on('inactive', function () {
+                                            block.css('background-color', '#EEE');
+                                        })
+                                        .on('inactive')
+                                        .on('click', function () {
+                                            var event = block.mark();
+                                            window.block.child('panels/finals/wrap/table/desired')
+                                                    .on(event)
+                                                    .parent(1)
+                                                .child('final').on(event)
+                                            ;
+                                            window.mode = event;
+                                            window.block.child('panels/finals/wrap/table/desired').data({
+                                                default: (window.mode == 'need' ? String(window.classgrade.toFixed(2)) : String(window.finalgrade.toFixed(2)))
+                                            });
+                                            var siblings = block.siblings();
+                                            for (var s in siblings) {
+                                                if (siblings.hasOwnProperty(s))
+                                                    siblings[s].on('inactive');
+                                            }
+                                            block.on('active');
+                                            updateFinals();
+                                        })
+                                        .add(Block('text', 1)
+                                            .css({
+                                                fontSize: '18px',
+                                                textTransform: 'uppercase',
+                                                color: '#505050'
+                                            })
+                                        )
+                                        return block;
+                                    }
+                                load
+                                    {
+                                        data('val', function (val) {
+                                            block.child('text').data(val);
+                                        });
+                                    }
+                            button need
+                                val What do I need
+                                css
+                                    border-radius 4px 0 0 4px
+                            button took
+                                val Already took it
+                                css
+                                    border-radius 0 4px 4px 0
+                    input-line desired
+                        val A
+                        default 92.50
+                        :need
+                            val Desired Class Grade
+                        :took
+                            val Final Test Grade
+                        :change, keyup, keydown
+                            {
+                                var val = block.child('input/input').node().value;
+                                if (!isNaN(val)) {
+                                    if (window.mode == 'need') window.classgrade = parseFloat(val);
+                                    else if (window.mode == 'took') window.finalgrade = parseFloat(val);
+                                }
+                                updateFinals();
+                            }
+                div final
+                    css
+                        margin-top 15px
+                    text text
+                        css
+                            font-size 32px
+                        val A
+                    :need
+                        text
+                            html Final Grade You Need&nbsp
+                    :took
+                        text
+                            html Class Grade After Final&nbsp
+                    text output
+                        css
+                            font 38px Courier New, Courier, monospace
+                            font-weight bold
+                            display inline-block
+                            height 40px
+                            color green
+                            background-color #EEE
+                            padding 8px 15px
+                            border-radius 5px
+                        val 0.00%
+                {
+                    setTimeout(function () {
+                        block.child('table/choice/td/' + window.mode).on('click');
+                    }, 10);
+                }
     {
-        block.child('menu/buttons/gpa').on('click');
+        // block.child('menu/buttons/gpa').on('click');
+        block.child('menu/buttons/finals').on('click');
     }

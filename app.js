@@ -1,4 +1,6 @@
 var block = Block('div', 'app');
+
+// gpa calculator
 var scale = {
     'A': 4,
     'A-': 3.7,
@@ -27,9 +29,28 @@ function updateGPA() {
     }
     newGPA /= grades.length;
     newGPA = newGPA.toFixed(2);
-    block.data({ 'gpa': newGPA });
+    block.data({ gpa: newGPA });
     return newGPA;
 }
+
+// final grade calculator
+var mode = 'need';
+var finalworth = 15;
+var currentgrade = 98;
+var classgrade = 92.5;
+var finalgrade = 0;
+function updateFinals() {
+    var examworth = finalworth / 100;
+    if (mode == 'need') {
+        finalgrade = (classgrade + currentgrade * examworth - currentgrade) / examworth;
+        block.data({ finals: finalgrade });
+    } else if (mode == 'took') {
+        classgrade = examworth * finalgrade + (1 - examworth) * currentgrade;
+        block.data({ finals: classgrade });
+    }
+}
+
+// load block
 block.load(function (b) {
     setTimeout(function () {
         b.fill(document.body);
