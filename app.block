@@ -525,6 +525,5 @@ app
                     }, 10);
                 }
     {
-        // block.child('menu/buttons/gpa').on('click');
-        block.child('menu/buttons/finals').on('click');
+        block.child('menu/buttons/gpa').on('click');
     }
