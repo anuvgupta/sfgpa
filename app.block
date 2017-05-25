@@ -524,6 +524,54 @@ app
                         block.child('table/choice/td/' + window.mode).on('click');
                     }, 10);
                 }
+        break spacer
+            // spacer
+        div hits
+            css
+                height 60px
+                width 100%
+                text-align center
+                text-transform uppercase
+                margin-top 50px
+                opacity 0.85
+                font-weight bold
+            text t1
+                id hits
+                val hits: 1
+                css
+                    font 35px 'Courier New', Courier
+                {
+                    var update = function (c) { block.html('').data('hits: ' + c); };
+                    $.ajax({
+                        url: window.server,
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.success && data.success === true)
+                                update(data.count);
+                            else console.log(data);
+                        },
+                        error: function (a, b, c) {
+                            console.log(a, b, c);
+                        }
+                    });
+                    $.ajax({
+                        url: window.server,
+                        method: 'POST',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.success && data.success === true) {
+                                update(data.count);
+                            } else {
+                                console.log(data);
+                                if (data.count) update(data.count);
+                            }
+                        },
+                        error: function (a, b, c) {
+                            console.log(a, b, c);
+                        }
+                    });
+                }
     {
         block.child('menu/buttons/gpa').on('click');
     }
