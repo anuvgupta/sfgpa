@@ -1,4 +1,4 @@
-var server = 'http://anuv/sites/sfgpa/www/';
+var server = 'http://count.sfgpa.anuv.me/';
 var block = Block('div', 'app');
 
 // gpa calculator
