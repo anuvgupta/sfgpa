@@ -1,5 +1,5 @@
 var server = 'http://count.sfgpa.anuv.me/';
-server = `${(location.protocol === 'https:' ? 'https' : 'http')}://count.sfgpa.anuv.me/`;
+server = `${(location.protocol === 'https:' ? 'https' : 'http')}://sfgpa.anuv.me/`;
 var block = Block('div', 'app');
 
 // gpa calculator
