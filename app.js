@@ -1,4 +1,5 @@
 var server = 'http://count.sfgpa.anuv.me/';
+server = `${(location.protocol === 'https:' ? 'https' : 'http')}://count.sfgpa.anuv.me/`;
 var block = Block('div', 'app');
 
 // gpa calculator
@@ -14,7 +15,7 @@ var scale = {
     'D+': 1.3,
     'D': 1.0,
     'F': 0,
-    order: [ 'F', 'D', 'D+', 'C-', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A' ]
+    order: ['F', 'D', 'D+', 'C-', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A']
 };
 var grades = [];
 for (var i = 0; i < 7; i++) grades.push({
